@@ -1,0 +1,24 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# block_14va
+#
+DEF block_14va U 0 40 Y Y 1 F N
+F0 "U" 150 -550 50 H V C CNN
+F1 "block_14va" 0 100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -200 50 200 -500 0 1 0 f
+X L1 1 -300 0 100 R 50 50 1 1 W
+X N1 2 -300 -150 100 R 50 50 1 1 W
+X L2 3 -300 -300 100 R 50 50 1 1 W
+X N2 4 -300 -450 100 R 50 50 1 1 W
+X ~ 5 300 -450 100 L 50 50 1 1 w
+X ~ 6 300 -300 100 L 50 50 1 1 w
+X ~ 7 300 -150 100 L 50 50 1 1 w
+X ~ 8 300 0 100 L 50 50 1 1 w
+ENDDRAW
+ENDDEF
+#
+#End Library

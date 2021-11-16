@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name pl_logo)(type Legacy)(uri ${KIPRJMOD}/lib_sch/pl_logo/pl_logo.lib)(options "")(descr ""))
+  (lib (name pl_xformer)(type Legacy)(uri ${KIPRJMOD}/lib_sch/pl_xformer/pl_xformer.lib)(options "")(descr ""))
+)
