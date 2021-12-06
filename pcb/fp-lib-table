@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name PL_logo)(type KiCad)(uri ${KIPRJMOD}/lib_fp/PL_logo.pretty)(options "")(descr ""))
+  (lib (name pl_Transformer)(type KiCad)(uri ${KIPRJMOD}/lib_fp/pl_Transformer.pretty/pl_Transformer.pretty)(options "")(descr ""))
+)
