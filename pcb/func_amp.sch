@@ -90,17 +90,6 @@ F 3 "~" H 3800 4300 50  0001 C CNN
 	1    3800 4300
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_Coaxial J2
-U 1 1 61951D20
-P 1750 3550
-F 0 "J2" H 1760 3670 50  0000 C CNN
-F 1 "IN" V 1865 3550 50  0000 C CNN
-F 2 "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal" H 1750 3550 50  0001 C CNN
-F 3 " ~" H 1750 3550 50  0001 C CNN
-	1    1750 3550
-	-1   0    0    -1  
-$EndComp
 Wire Wire Line
 	3000 4850 3000 4450
 Wire Wire Line
@@ -231,35 +220,20 @@ Wire Wire Line
 	5450 4050 5450 3650
 Wire Wire Line
 	5450 3650 5200 3650
-$Comp
-L Connector_Generic:Conn_01x02 J3
-U 1 1 619A801A
-P 6050 3750
-F 0 "J3" H 6050 3850 50  0000 C CNN
-F 1 "LOAD" H 6050 3550 50  0000 C CNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-2-5.08_1x02_P5.08mm_Horizontal" H 6050 3750 50  0001 C CNN
-F 3 "~" H 6050 3750 50  0001 C CNN
-	1    6050 3750
-	1    0    0    1   
-$EndComp
 Wire Wire Line
 	5850 3650 5450 3650
 Connection ~ 5450 3650
 $Comp
 L power:GND #PWR014
 U 1 1 619A98BA
-P 5750 3850
-F 0 "#PWR014" H 5750 3600 50  0001 C CNN
-F 1 "GND" H 5750 3700 50  0000 C CNN
-F 2 "" H 5750 3850 50  0001 C CNN
-F 3 "" H 5750 3850 50  0001 C CNN
-	1    5750 3850
+P 5800 4850
+F 0 "#PWR014" H 5800 4600 50  0001 C CNN
+F 1 "GND" H 5800 4700 50  0000 C CNN
+F 2 "" H 5800 4850 50  0001 C CNN
+F 3 "" H 5800 4850 50  0001 C CNN
+	1    5800 4850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	5750 3850 5750 3750
-Wire Wire Line
-	5750 3750 5850 3750
 $Comp
 L Device:R R6
 U 1 1 61AC4A9E
@@ -282,23 +256,8 @@ F 3 "https://belfuse.com/resources/datasheets/signaltransformer/ds-st-st-series.
 	1    2200 1400
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector:Conn_WallPlug_Earth P1
-U 1 1 61AD3884
-P 850 1300
-F 0 "P1" H 850 1450 50  0000 C BNN
-F 1 "AC-01B" V 650 1300 50  0000 C BNN
-F 2 "TerminalBlock_Phoenix:TerminalBlock_Phoenix_MKDS-1,5-3-5.08_1x03_P5.08mm_Horizontal" H 1250 1300 50  0001 C CNN
-F 3 "~" H 1250 1300 50  0001 C CNN
-	1    850  1300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	1800 1600 1400 1600
-Wire Wire Line
-	1400 1600 1400 1400
-Wire Wire Line
-	1400 1400 1150 1400
+	1800 1600 1150 1600
 Text Label 1800 1200 2    50   ~ 0
 L
 Text Label 1800 1600 2    50   ~ 0
@@ -306,18 +265,18 @@ N
 $Comp
 L power:GNDPWR #PWR01
 U 1 1 61ADE29C
-P 1200 1650
-F 0 "#PWR01" H 1200 1450 50  0001 C CNN
-F 1 "GNDPWR" H 1200 1520 50  0000 C CNN
-F 2 "" H 1200 1600 50  0001 C CNN
-F 3 "" H 1200 1600 50  0001 C CNN
-	1    1200 1650
+P 1250 1950
+F 0 "#PWR01" H 1250 1750 50  0001 C CNN
+F 1 "GNDPWR" H 1250 1820 50  0000 C CNN
+F 2 "" H 1250 1900 50  0001 C CNN
+F 3 "" H 1250 1900 50  0001 C CNN
+	1    1250 1950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1150 1600 1200 1600
+	1150 1900 1250 1900
 Wire Wire Line
-	1200 1600 1200 1650
+	1250 1900 1250 1950
 $Comp
 L power:GNDPWR #PWR02
 U 1 1 61AE2997
@@ -502,7 +461,7 @@ Text Notes 5300 1250 0    50   ~ 0
 size discharge resistors so \nno load votlage does not \nexceeded tda2030 Vmax
 Wire Wire Line
 	1150 1200 1800 1200
-Text Notes 600  2100 0    50   ~ 0
+Text Notes 600  1050 0    50   ~ 0
 Power Entry Module with\nSwitch and Fuse
 Text Notes 550  650  0    50   ~ 0
 Linear Power Supply
@@ -585,12 +544,12 @@ $EndComp
 $Comp
 L power:GNDS #PWR06
 U 1 1 61BCFACB
-P 1750 4250
-F 0 "#PWR06" H 1750 4000 50  0001 C CNN
-F 1 "GNDS" H 1750 4100 50  0000 C CNN
-F 2 "" H 1750 4250 50  0001 C CNN
-F 3 "" H 1750 4250 50  0001 C CNN
-	1    1750 4250
+P 2050 4850
+F 0 "#PWR06" H 2050 4600 50  0001 C CNN
+F 1 "GNDS" H 2050 4700 50  0000 C CNN
+F 2 "" H 2050 4850 50  0001 C CNN
+F 3 "" H 2050 4850 50  0001 C CNN
+	1    2050 4850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -651,8 +610,6 @@ Wire Wire Line
 	4050 1700 4050 1400
 Wire Wire Line
 	4050 1400 4250 1400
-Wire Wire Line
-	1750 3750 1750 4200
 $Comp
 L Device:C C5
 U 1 1 6194823C
@@ -720,11 +677,6 @@ Wire Wire Line
 	2050 3550 1950 3550
 Wire Wire Line
 	2050 4050 2050 4200
-Wire Wire Line
-	2050 4200 1750 4200
-Connection ~ 1750 4200
-Wire Wire Line
-	1750 4200 1750 4250
 $Comp
 L Device:R R11
 U 1 1 61C05569
@@ -771,72 +723,6 @@ Wire Wire Line
 	4600 2950 4350 2950
 Wire Wire Line
 	4100 2950 4350 2950
-$Comp
-L power:GNDPWR #PWR017
-U 1 1 61EDE077
-P 6850 2700
-F 0 "#PWR017" H 6850 2500 50  0001 C CNN
-F 1 "GNDPWR" H 6850 2570 50  0000 C CNN
-F 2 "" H 6850 2650 50  0001 C CNN
-F 3 "" H 6850 2650 50  0001 C CNN
-	1    6850 2700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GNDS #PWR018
-U 1 1 61EDE60D
-P 6450 2700
-F 0 "#PWR018" H 6450 2450 50  0001 C CNN
-F 1 "GNDS" H 6450 2550 50  0000 C CNN
-F 2 "" H 6450 2700 50  0001 C CNN
-F 3 "" H 6450 2700 50  0001 C CNN
-	1    6450 2700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR019
-U 1 1 61EDEC43
-P 7250 2700
-F 0 "#PWR019" H 7250 2450 50  0001 C CNN
-F 1 "GND" H 7250 2550 50  0000 C CNN
-F 2 "" H 7250 2700 50  0001 C CNN
-F 3 "" H 7250 2700 50  0001 C CNN
-	1    7250 2700
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:Net-Tie_3_Tee NT1
-U 1 1 61EE062F
-P 6850 2500
-F 0 "NT1" H 6850 2625 50  0000 C CNN
-F 1 "Net-Tie_3_Tee" H 6850 2550 50  0000 C CNN
-F 2 "NetTie:NetTie-3_SMD_Pad2.0mm" H 6850 2500 50  0001 C CNN
-F 3 "~" H 6850 2500 50  0001 C CNN
-	1    6850 2500
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6950 2500 7250 2500
-Wire Wire Line
-	7250 2500 7250 2700
-Wire Wire Line
-	6850 2600 6850 2700
-Wire Wire Line
-	6750 2500 6450 2500
-Wire Wire Line
-	6450 2500 6450 2700
-Text Notes 6250 2300 0    50   ~ 0
-Star Ground
-Wire Notes Line
-	6250 2300 7350 2300
-Wire Notes Line
-	7350 2900 6250 2900
-Wire Notes Line
-	6250 2900 6250 2200
-Wire Notes Line
-	6250 2200 7350 2200
-Wire Notes Line
-	7350 2200 7350 2900
 $Comp
 L Mechanical:MountingHole H1
 U 1 1 61B1CEBF
@@ -1028,12 +914,177 @@ Wire Notes Line
 $Comp
 L Mechanical:Heatsink HS1
 U 1 1 61BCD7D7
-P 5450 5950
-F 0 "HS1" H 5450 6250 50  0000 C CNN
-F 1 "Heatsink" H 5450 6150 50  0000 C CNN
-F 2 "pl_heatsink:random_psu_heatsink" H 5462 5900 50  0001 C CNN
-F 3 "~" H 5462 5900 50  0001 C CNN
-	1    5450 5950
+P 4000 3400
+F 0 "HS1" H 4000 3700 50  0000 C CNN
+F 1 "Heatsink" H 4000 3600 50  0000 C CNN
+F 2 "pl_heatsink:random_psu_heatsink" H 4012 3350 50  0001 C CNN
+F 3 "~" H 4012 3350 50  0001 C CNN
+	1    4000 3400
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector:Conn_01x01_Male J1
+U 1 1 61BA8DE8
+P 950 1200
+F 0 "J1" H 950 1300 50  0000 C CNN
+F 1 "L" H 950 1100 50  0000 C CNN
+F 2 "pl_connector:TE_0.25in_spade_63824-1" H 950 1200 50  0001 C CNN
+F 3 "~" H 950 1200 50  0001 C CNN
+	1    950  1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J2
+U 1 1 61BAD5EC
+P 950 1600
+F 0 "J2" H 950 1700 50  0000 C CNN
+F 1 "N" H 950 1500 50  0000 C CNN
+F 2 "pl_connector:TE_0.25in_spade_63824-1" H 950 1600 50  0001 C CNN
+F 3 "~" H 950 1600 50  0001 C CNN
+	1    950  1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J3
+U 1 1 61BADC14
+P 950 1900
+F 0 "J3" H 950 2000 50  0000 C CNN
+F 1 "G" H 950 1800 50  0000 C CNN
+F 2 "pl_connector:TE_0.25in_spade_63824-1" H 950 1900 50  0001 C CNN
+F 3 "~" H 950 1900 50  0001 C CNN
+	1    950  1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J4
+U 1 1 61BB2EC3
+P 1750 3550
+F 0 "J4" H 1750 3650 50  0000 C CNN
+F 1 "IN" H 1750 3450 50  0000 C CNN
+F 2 "pl_connector:TE_0.25in_spade_63824-1" H 1750 3550 50  0001 C CNN
+F 3 "~" H 1750 3550 50  0001 C CNN
+	1    1750 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J5
+U 1 1 61BB7620
+P 1750 4200
+F 0 "J5" H 1750 4300 50  0000 C CNN
+F 1 "GNDS" H 1750 4100 50  0000 C CNN
+F 2 "pl_connector:TE_0.25in_spade_63824-1" H 1750 4200 50  0001 C CNN
+F 3 "~" H 1750 4200 50  0001 C CNN
+	1    1750 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 4200 2050 4200
+Wire Wire Line
+	2050 4850 2050 4600
+Connection ~ 2050 4200
+$Comp
+L Connector:Conn_01x01_Male J6
+U 1 1 61BC791E
+P 6050 3650
+F 0 "J6" H 6050 3750 50  0000 C CNN
+F 1 "OUT" H 6050 3550 50  0000 C CNN
+F 2 "pl_connector:TE_0.25in_spade_63824-1" H 6050 3650 50  0001 C CNN
+F 3 "~" H 6050 3650 50  0001 C CNN
+	1    6050 3650
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J7
+U 1 1 61BD33F8
+P 6050 3950
+F 0 "J7" H 6050 4050 50  0000 C CNN
+F 1 "GND" H 6050 3850 50  0000 C CNN
+F 2 "pl_connector:TE_0.25in_spade_63824-1" H 6050 3950 50  0001 C CNN
+F 3 "~" H 6050 3950 50  0001 C CNN
+	1    6050 3950
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4850 5800 4250
+Wire Wire Line
+	5800 3950 5850 3950
+$Comp
+L Connector:Conn_01x01_Male J9
+U 1 1 61C1E53F
+P 5950 1400
+F 0 "J9" H 5950 1500 50  0000 C CNN
+F 1 "GND" H 5950 1300 50  0000 C CNN
+F 2 "pl_connector:TE_0.25in_spade_63824-1" H 5950 1400 50  0001 C CNN
+F 3 "~" H 5950 1400 50  0001 C CNN
+	1    5950 1400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J10
+U 1 1 61C1EB69
+P 5950 1700
+F 0 "J10" H 5950 1800 50  0000 C CNN
+F 1 "GNDS" H 5950 1600 50  0000 C CNN
+F 2 "pl_connector:TE_0.25in_spade_63824-1" H 5950 1700 50  0001 C CNN
+F 3 "~" H 5950 1700 50  0001 C CNN
+	1    5950 1700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5150 1400 5650 1400
+Wire Wire Line
+	5750 1700 5650 1700
+Wire Wire Line
+	5650 1700 5650 1400
+Connection ~ 5650 1400
+Wire Wire Line
+	5650 1400 5750 1400
+$Comp
+L Connector:Conn_01x01_Male J8
+U 1 1 61C3A4B1
+P 1750 4600
+F 0 "J8" H 1750 4700 50  0000 C CNN
+F 1 "GNDS" H 1750 4500 50  0000 C CNN
+F 2 "pl_connector:TE_0.25in_spade_63824-1" H 1750 4600 50  0001 C CNN
+F 3 "~" H 1750 4600 50  0001 C CNN
+	1    1750 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 4600 2050 4600
+Connection ~ 2050 4600
+Wire Wire Line
+	2050 4600 2050 4200
+$Comp
+L Connector:Conn_01x01_Male J11
+U 1 1 61C3E9CC
+P 6050 4250
+F 0 "J11" H 6050 4350 50  0000 C CNN
+F 1 "GND" H 6050 4150 50  0000 C CNN
+F 2 "pl_connector:TE_0.25in_spade_63824-1" H 6050 4250 50  0001 C CNN
+F 3 "~" H 6050 4250 50  0001 C CNN
+	1    6050 4250
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 4250 5800 4250
+Connection ~ 5800 4250
+Wire Wire Line
+	5800 4250 5800 3950
+Wire Notes Line
+	6100 4250 6400 4250
+Text Notes 6450 4250 0    50   ~ 0
+Wire to GRDPWR
+Text Notes 1400 4600 2    50   ~ 0
+Wire to GRDPWR
+Wire Notes Line
+	1700 4600 1400 4600
+Wire Notes Line
+	6000 1400 6300 1400
+Wire Notes Line
+	6000 1700 6300 1700
+Text Notes 6300 1400 0    50   ~ 0
+Wire from GND
+Text Notes 6300 1700 0    50   ~ 0
+Wire from GNDS
 $EndSCHEMATC
