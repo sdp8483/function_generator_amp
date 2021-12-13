@@ -262,32 +262,10 @@ Text Label 1800 1200 2    50   ~ 0
 L
 Text Label 1800 1600 2    50   ~ 0
 N
-$Comp
-L power:GNDPWR #PWR01
-U 1 1 61ADE29C
-P 1250 1950
-F 0 "#PWR01" H 1250 1750 50  0001 C CNN
-F 1 "GNDPWR" H 1250 1820 50  0000 C CNN
-F 2 "" H 1250 1900 50  0001 C CNN
-F 3 "" H 1250 1900 50  0001 C CNN
-	1    1250 1950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	1150 1900 1250 1900
 Wire Wire Line
 	1250 1900 1250 1950
-$Comp
-L power:GNDPWR #PWR02
-U 1 1 61AE2997
-P 2850 1450
-F 0 "#PWR02" H 2850 1250 50  0001 C CNN
-F 1 "GNDPWR" H 2850 1320 50  0000 C CNN
-F 2 "" H 2850 1400 50  0001 C CNN
-F 3 "" H 2850 1400 50  0001 C CNN
-	1    2850 1450
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	2600 1300 2600 1400
 Wire Wire Line
@@ -402,17 +380,6 @@ Wire Wire Line
 Connection ~ 4700 1400
 Wire Wire Line
 	4700 1400 4700 1300
-$Comp
-L power:GNDPWR #PWR05
-U 1 1 61B21BB0
-P 4050 1700
-F 0 "#PWR05" H 4050 1500 50  0001 C CNN
-F 1 "GNDPWR" H 4050 1570 50  0000 C CNN
-F 2 "" H 4050 1650 50  0001 C CNN
-F 3 "" H 4050 1650 50  0001 C CNN
-	1    4050 1700
-	1    0    0    -1  
-$EndComp
 $Comp
 L pl_power:+V #PWR03
 U 1 1 61B39FC7
@@ -1074,9 +1041,9 @@ Wire Wire Line
 Wire Notes Line
 	6100 4250 6400 4250
 Text Notes 6450 4250 0    50   ~ 0
-Wire to GRDPWR
+Wire to EARTH
 Text Notes 1400 4600 2    50   ~ 0
-Wire to GRDPWR
+Wire to EARTH
 Wire Notes Line
 	1700 4600 1400 4600
 Wire Notes Line
@@ -1087,4 +1054,75 @@ Text Notes 6300 1400 0    50   ~ 0
 Wire from GND
 Text Notes 6300 1700 0    50   ~ 0
 Wire from GNDS
+$Comp
+L power:Earth #PWR05
+U 1 1 61C916F0
+P 4050 1700
+F 0 "#PWR05" H 4050 1450 50  0001 C CNN
+F 1 "Earth" H 4050 1550 50  0001 C CNN
+F 2 "" H 4050 1700 50  0001 C CNN
+F 3 "~" H 4050 1700 50  0001 C CNN
+	1    4050 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR02
+U 1 1 61C98FA2
+P 2850 1450
+F 0 "#PWR02" H 2850 1200 50  0001 C CNN
+F 1 "Earth" H 2850 1300 50  0001 C CNN
+F 2 "" H 2850 1450 50  0001 C CNN
+F 3 "~" H 2850 1450 50  0001 C CNN
+	1    2850 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J13
+U 1 1 61C9FC9C
+P 5950 2000
+F 0 "J13" H 5950 2100 50  0000 C CNN
+F 1 "GNDPWR" H 5950 1900 50  0000 C CNN
+F 2 "pl_connector:TE_0.25in_spade_63824-1" H 5950 2000 50  0001 C CNN
+F 3 "~" H 5950 2000 50  0001 C CNN
+	1    5950 2000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:Earth #PWR01
+U 1 1 61CA317C
+P 1250 1950
+F 0 "#PWR01" H 1250 1700 50  0001 C CNN
+F 1 "Earth" H 1250 1800 50  0001 C CNN
+F 2 "" H 1250 1950 50  0001 C CNN
+F 3 "~" H 1250 1950 50  0001 C CNN
+	1    1250 1950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 2000 5650 2000
+Wire Wire Line
+	5650 2000 5650 1700
+Connection ~ 5650 1700
+$Comp
+L Connector:Conn_01x01_Male J12
+U 1 1 61CADA39
+P 5200 2550
+F 0 "J12" H 5200 2650 50  0000 C CNN
+F 1 "GNDPWR" H 5200 2450 50  0000 C CNN
+F 2 "pl_connector:TE_0.25in_spade_63824-1" H 5200 2550 50  0001 C CNN
+F 3 "~" H 5200 2550 50  0001 C CNN
+	1    5200 2550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5000 2550 4600 2550
+Connection ~ 4600 2550
+Wire Notes Line
+	5250 2550 5550 2550
+Wire Notes Line
+	6000 2000 6300 2000
+Text Notes 6300 2000 0    50   ~ 0
+Wire from GNDPWR
+Text Notes 5550 2550 0    50   ~ 0
+Wire to EARTH
 $EndSCHEMATC
