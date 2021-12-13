@@ -22,76 +22,20 @@ X +Vs 5 -100 300 150 D 50 40 1 1 W
 ENDDRAW
 ENDDEF
 #
-# Connector_Conn_Coaxial
+# Connector_Conn_01x01_Male
 #
-DEF Connector_Conn_Coaxial J 0 40 Y N 1 F N
-F0 "J" 10 120 50 H V C CNN
-F1 "Connector_Conn_Coaxial" 115 0 50 V V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- *BNC*
- *SMA*
- *SMB*
- *SMC*
- *Cinch*
-$ENDFPLIST
-DRAW
-A -2 0 71 1636 0 0 1 10 N -70 20 70 0
-A -1 0 71 0 -1638 0 1 10 N 70 0 -70 -20
-C 0 0 20 0 1 8 N
-P 2 0 1 0 -100 0 -20 0 N
-P 2 0 1 0 0 -100 0 -70 N
-X In 1 -200 0 100 R 50 50 1 1 P
-X Ext 2 0 -200 100 U 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Connector_Conn_WallPlug_Earth
-#
-DEF Connector_Conn_WallPlug_Earth P 0 0 Y Y 1 F N
-F0 "P" 0 150 50 H V C BNN
-F1 "Connector_Conn_WallPlug_Earth" -200 0 50 V V C BNN
-F2 "" 400 0 50 H I C CNN
-F3 "" 400 0 50 H I C CNN
-DRAW
-A -125 0 150 -899 899 0 1 10 f -125 -150 -125 150
-C 100 -300 14 0 1 0 F
-P 2 0 1 20 -175 -100 -25 -100 N
-P 2 0 1 20 -175 0 20 0 N
-P 2 0 1 20 -175 100 -25 100 N
-P 2 0 1 10 -125 -150 -125 150 N
-P 2 0 1 0 -25 -100 100 -100 N
-P 2 0 1 0 -25 100 100 100 N
-P 2 0 1 8 60 -370 140 -370 N
-P 2 0 1 8 70 -390 130 -390 N
-P 2 0 1 8 80 -410 120 -410 N
-P 2 0 1 8 90 -430 110 -430 N
-P 2 0 1 8 100 -300 100 -350 N
-P 2 0 1 8 150 -350 50 -350 N
-P 4 0 1 0 100 -300 75 -300 75 0 -175 0 N
-X AC_P 1 300 100 200 L 50 50 1 1 w
-X AC_N 2 300 -100 200 L 50 50 1 1 w
-X EARTH 3 300 -300 200 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Connector_Generic_Conn_01x02
-#
-DEF Connector_Generic_Conn_01x02 J 0 40 Y N 1 F N
+DEF Connector_Conn_01x01_Male J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "Connector_Generic_Conn_01x02" 0 -200 50 H V C CNN
+F1 "Connector_Conn_01x01_Male" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
- Connector*:*_1x??_*
+ Connector*:*
 $ENDFPLIST
 DRAW
-S -50 -95 0 -105 1 1 6 N
-S -50 5 0 -5 1 1 6 N
-S -50 50 50 -150 1 1 10 f
-X Pin_1 1 -200 0 150 R 50 50 1 1 P
-X Pin_2 2 -200 -100 150 R 50 50 1 1 P
+S 34 5 0 -5 1 1 6 F
+P 2 1 1 6 50 0 34 0 N
+X Pin_1 1 200 0 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -162,27 +106,6 @@ X + 1 300 0 100 L 50 50 1 1 P
 X ~~ 2 0 300 100 D 50 50 1 1 P
 X ~~ 3 0 -300 100 U 50 50 1 1 P
 X - 4 -300 0 100 R 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# Device_Net-Tie_3_Tee
-#
-DEF Device_Net-Tie_3_Tee NT 0 0 N N 1 F N
-F0 "NT" 0 125 50 H V C CNN
-F1 "Device_Net-Tie_3_Tee" 0 50 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Net*Tie*
-$ENDFPLIST
-DRAW
-P 2 0 1 20 -50 0 50 0 N
-P 2 0 1 10 -50 0 50 0 N
-P 2 0 1 10 0 -100 0 -100 N
-P 2 0 1 20 0 -50 0 0 N
-X 1 1 -100 0 100 R 50 50 1 1 P
-X 2 2 100 0 100 L 50 50 1 1 P
-X 3 3 0 -100 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
@@ -323,6 +246,22 @@ X SA 5 400 400 300 L 50 50 1 1 P
 X SB 6 400 100 300 L 50 50 1 1 P
 X SC 7 400 -100 300 L 50 50 1 1 P
 X SD 8 400 -400 300 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# power_Earth
+#
+DEF power_Earth #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power_Earth" 0 -150 50 H I C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 2 0 1 0 -25 -75 25 -75 N
+P 2 0 1 0 -5 -100 5 -100 N
+P 2 0 1 0 0 -50 0 0 N
+P 2 0 1 0 50 -50 -50 -50 N
+X Earth 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
